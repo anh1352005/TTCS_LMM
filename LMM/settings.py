@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u1lxr86e8&dsrpql%xf1ga54+yx3(f!u@oihb862gdy@p29aq)
 DEBUG = True
 
 ALLOWED_HOSTS = []
-AUTH_USER_MODEL='core.User'
+AUTH_USER_MODEL = 'core.User'
 
 # Application definition
 
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    'rest_framework',
+    'django_extensions',
     'core',
     'books',
     'loans',

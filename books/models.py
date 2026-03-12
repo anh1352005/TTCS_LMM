@@ -26,3 +26,7 @@ class Book(models.Model):
     
     def __str__(self):
         return self.title
+    def save(self, *args, **kwargs):
+        if self.available_quantity > self.total_quantity:
+            self.available_quantity = self.total_quantity
+        super().save(*args, **kwargs)

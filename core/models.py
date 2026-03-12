@@ -11,6 +11,9 @@ class User(AbstractUser):
     address=models.TextField(blank=True,null=True)
     phone=models.CharField(max_length=20,blank=True,null=True)
     date_of_birth=models.DateField(blank=True,null=True)
-    role=models.CharField(max_length=20,choices=ROLE_CHOICES,default='reader')
+    role=models.CharField(
+        max_length=20,
+        choices=ROLE_CHOICES,
+        default='reader')
     def __str__(self):
         return self.full_name
